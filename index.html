@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AskBit Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>AskBit Helper Bot</h1>
+      <p>
+        Need help? Tap the chat icon to start a conversation with the AskBit assistant.
+      </p>
+      <button class="primary-cta" type="button">Get Started</button>
+    </section>
+  </main>
+
+  <button class="chat-launcher" type="button" aria-label="Open chat" data-chat-toggle>
+    <span class="chat-launcher__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path d="M6.5 19.5c1.9 1 4.1 1.5 6.3 1.5 4.6 0 8.7-2.4 10.7-6.1.2-.4.3-.8.4-1.3.2-1.1.1-2.2-.2-3.3C22.9 6.7 18.9 4 14.2 4 8.8 4 4.2 7.5 3.3 12.1c-.4 2.2.1 4.3 1.2 6.1L3 21l3.5-1.5Z" />
+      </svg>
+    </span>
+    <span class="chat-launcher__label">Chat</span>
+  </button>
+
+  <section class="chat-panel" aria-live="polite" aria-label="AskBit chat" data-chat-panel>
+    <header class="chat-panel__header">
+      <div>
+        <p class="chat-panel__title">AskBit Assistant</p>
+        <p class="chat-panel__subtitle">Online · Ready to help</p>
+      </div>
+      <button class="chat-panel__close" type="button" aria-label="Close chat" data-chat-toggle>
+        ✕
+      </button>
+    </header>
+
+    <div class="chat-panel__messages" data-chat-messages>
+      <article class="message message--bot">
+        <p class="message__bubble">Hi! I’m AskBit. How can I help today?</p>
+      </article>
+    </div>
+
+    <div class="chat-panel__typing" data-typing-status hidden>
+      <span class="typing-label">AskBit is typing</span>
+      <span class="typing-dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </div>
+
+    <form class="chat-panel__input" data-chat-form>
+      <div class="input-wrapper">
+        <input
+          type="text"
+          name="message"
+          placeholder="Type your message..."
+          autocomplete="off"
+          aria-label="Message"
+          data-chat-input
+        />
+        <button type="submit" class="send-button" aria-label="Send message">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M3.4 20.6 21 12 3.4 3.4l.4 6.2L14 12 3.8 14.4l-.4 6.2Z" />
+          </svg>
+        </button>
+      </div>
+      <p class="chat-panel__hint">
+        Press <span>Enter</span> to send · <span>Shift</span> + <span>Enter</span> for a new line
+      </p>
+    </form>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
